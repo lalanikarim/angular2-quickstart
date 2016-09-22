@@ -57,7 +57,6 @@ import { HeroService } from './hero.service';
   `],
 
   template: `
-    <h1>{{title}}</h1>
     <h2>My Heroes</h2>
     <ul class="heroes">
       <li *ngFor="let hero of heroes"
@@ -67,8 +66,7 @@ import { HeroService } from './hero.service';
       </li>
     </ul>
     <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-    `,
-  providers: [ HeroService ]
+    `
 })
 
 export class HeroesComponent implements OnInit {
@@ -78,7 +76,6 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-  title= 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
 
