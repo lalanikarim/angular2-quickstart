@@ -66,10 +66,13 @@ import { HeroService } from './hero.service';
       </li>
     </ul>
     <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-    `
+    `,
+  providers: [ HeroService ]
 })
 
-export class AppComponent { 
+export class AppComponent {
+  constructor(private heroService: HeroService){}
+
   title= 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
