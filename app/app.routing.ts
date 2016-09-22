@@ -12,7 +12,12 @@ const appRoutes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
-  }
+  },
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  }  
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
